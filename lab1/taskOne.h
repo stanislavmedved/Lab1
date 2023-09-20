@@ -3,5 +3,5 @@
 #include <string>
 
 void taskOne();
-bool checkForBadSymbol(char a, char badSymbols[]);
+bool checkForBadSymbol(char testedChar);
 std::string sortString(std::string s);

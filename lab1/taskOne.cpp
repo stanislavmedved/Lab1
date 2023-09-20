@@ -23,14 +23,16 @@
 #include "taskOne.h"
 #include <string>
 
+
 // :D
 extern "C"
 {
 	int printf(const char* format, ...);
 }
+//строка с символами, которые надо убрать
+const std::string badCharacters = "( ) ` ~ ! @ # $ % ^ & * - + = | \\ { } [ ] : ; \" ' < > , . ? / _ Е \n";
 
 void taskOne() {
-	char badSymbols[] = {' ', '-'}; //массив с символами, которые надо отфильтровать
 	char inputString[8192]; //буфер ввода
 
 	//запросить строку
@@ -43,7 +45,7 @@ void taskOne() {
 	//отфильтровать
 	std::string filteredString = "";
 	for (int i = 0; i < unfilteredString.length(); i++) {
-		if (!checkForBadSymbol(unfilteredString.at(i), badSymbols)) {
+		if (!checkForBadSymbol(unfilteredString.at(i))) {
 			filteredString += unfilteredString.at(i);
 		}
 	}
@@ -54,13 +56,14 @@ void taskOne() {
 	//вывести
 	printf("ќтсортированна€ строка:\n");
 	printf(sortedString.c_str());
+	printf("\n\n");
 }
 
 //ќпредел€ет, €вл€етс€ ли символ плохим (требующим фильтрации)
-bool checkForBadSymbol(char a, char badSymbols[]) {
+bool checkForBadSymbol(char testedChar) {
 	//—равниваем символ с каждым элементов массива badSymbols
-	for (int j = 0; j < sizeof(badSymbols) / sizeof(badSymbols[0]); j++) {
-		if (a == badSymbols[j])
+	for (int i = 0; i < badCharacters.length(); i++) {
+		if (testedChar == badCharacters[i])
 			return true;
 	}
 	return false;
