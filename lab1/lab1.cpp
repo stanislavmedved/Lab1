@@ -5,6 +5,9 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    system("chcp 1251");
+    setlocale(LC_ALL, "rus");
+    std::cout << "###ЗАДАНИЕ 1###\n";
     taskOne();
+    std::cout << "###ЗАДАНИЕ 2###\n";
 }

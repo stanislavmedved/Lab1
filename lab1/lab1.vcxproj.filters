@@ -21,9 +21,15 @@
     <ClCompile Include="taskOne.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="taskTwo.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="taskOne.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="taskTwo.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
