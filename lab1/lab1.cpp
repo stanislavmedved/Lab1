@@ -6,13 +6,12 @@
 
 int main()
 {
-    //Изменение кодировки консоли и программы
-    system("chcp 1251");
-    system("cls");
-    setlocale(LC_ALL, "rus");
+    system("chcp 1251");      //Изменение кодировки консоли
+    system("cls");            //Очистка консоли
+    setlocale(LC_ALL, "rus"); //Изменение кодировки программы
 
     std::cout << "###ЗАДАНИЕ 1###\n";
     taskOne();
-    std::cout << "###ЗАДАНИЕ 2###\n";
+    std::cout << "\n###ЗАДАНИЕ 2###\n";
     taskTwo();
 }
